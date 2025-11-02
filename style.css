@@ -132,7 +132,7 @@ h1,h2,h3{font-family:'Playfair Display', serif; color:var(--text)}
     top: 70px;
     right: 20px;
     flex-direction: column;
-    background: rgba(255, 255, 255, 0.85);
+    background: rgba(255, 255, 255, 0.55);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     border: 1px solid rgba(255, 255, 255, 0.4);
