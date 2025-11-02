@@ -248,7 +248,7 @@ header.navbar {
   font-family: 'Playfair Display', serif;
   font-weight: 700;
   color: #3b2b1b;
-  margin-left: 4px; 
+  margin-left: 16px; 
 }
 
 .logo span {
@@ -264,7 +264,7 @@ header.navbar {
   justify-content: center;
   gap: 4px;
   cursor: pointer;
-  margin-right: 6px; 
+  margin-right: 16px; 
 }
 
 .menu-toggle .bar {
