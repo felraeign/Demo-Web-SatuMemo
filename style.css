@@ -132,12 +132,16 @@ h1,h2,h3{font-family:'Playfair Display', serif; color:var(--text)}
     top: 70px;
     right: 20px;
     flex-direction: column;
-    background: #fff8f2;
-    border-radius: 10px;
-    box-shadow: 0 6px 20px rgba(0,0,0,0.1);
-    padding: 10px 0;
-    width: 200px;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 14px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+    padding: 12px 0;
+    width: 210px;
     z-index: 100;
+    transition: all 0.3s ease-in-out;
   }
 
   .nav-links.show {
@@ -150,10 +154,11 @@ h1,h2,h3{font-family:'Playfair Display', serif; color:var(--text)}
     color: var(--muted);
     font-weight: 600;
     transition: all 0.3s ease;
+    border-radius: 8px;
   }
 
   .nav-links a:hover {
-    background: rgba(196, 122, 103, 0.15);
+    background: rgba(196, 122, 103, 0.25);
     color: var(--text);
     transform: scale(1.05);
   }
@@ -274,3 +279,19 @@ header.navbar {
   border-radius: 2px;
   transition: 0.3s;
 }
+
+
+
+/* Warna ikon hamburger disamakan dengan warna teks navigasi */
+.menu-toggle .bar {
+  background-color: var(--muted);
+}
+
+/* Saat ikon berubah jadi X tetap pakai warna sama */
+.menu-toggle.active .bar {
+  background-color: var(--muted);
+}
+
+
+
+
