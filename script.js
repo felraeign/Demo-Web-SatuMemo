@@ -1,5 +1,4 @@
-
-// Smooth scroll for nav links
+// --- Smooth scroll untuk nav links ---
 document.querySelectorAll('.nav-links a, .logo a, .btn-primary').forEach(el => {
   el.addEventListener('click', function(e){
     e.preventDefault();
@@ -11,7 +10,8 @@ document.querySelectorAll('.nav-links a, .logo a, .btn-primary').forEach(el => {
   });
 });
 
-// IntersectionObserver for reveal animations
+
+// --- Efek reveal saat scroll menggunakan IntersectionObserver ---
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if(entry.isIntersecting){
@@ -22,4 +22,28 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
-// simple mobile nav toggle could be added later
+
+// --- Toggle menu hamburger ---
+const menuToggle = document.querySelector('.menu-toggle');
+const navLinks = document.querySelector('.nav-links');
+
+menuToggle.addEventListener('click', () => {
+  menuToggle.classList.toggle('active');
+  navLinks.classList.toggle('show');
+});
+
+// Tutup menu otomatis saat salah satu link diklik
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => {
+    menuToggle.classList.remove('active');
+    navLinks.classList.remove('show');
+  });
+});
+
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', function() {
+    document.querySelectorAll('.nav-links a').forEach(el => el.classList.remove('active'));
+    this.classList.add('active');
+  });
+});
